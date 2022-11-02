@@ -232,7 +232,7 @@ class GenerateTransactions
             'category_name'      => null,
             'category_id'        => null,
             'notes'              => $entry->getNotes(),
-            'external_id'        => $entry->transactionId,
+            'external_id'        => substr($entry->transactionId, 0, 16),
             'internal_reference' => $entry->accountIdentifier,
         ];
 
